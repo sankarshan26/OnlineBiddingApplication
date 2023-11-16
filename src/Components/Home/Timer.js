@@ -42,7 +42,7 @@ const Timer = ({ endDate }) => {
 
   return (
     <div className="flex items-center justify-start">
-      <div className="text-lg font-semibold text-grey-800">Ends in:</div>
+      <div className="text-lg font-semibold text-grey-800">Ends in :</div>
       <div className="flex flex-col ml-2 text-red-500">
         <div className="text-xs font-medium">Hours</div>
         <div className="text-lg font-bold text-center ">{formatTime(remainingTime.hours)}</div>

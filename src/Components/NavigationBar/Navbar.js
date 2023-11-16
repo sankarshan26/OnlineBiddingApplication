@@ -26,12 +26,13 @@ function Navbar() {
             </span>
           </Link>
           <div className="flex md:order-2">
+            <Link to="/login">
             <button
               type="button"
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Login
-            </button>
+            </button></Link>
             <button
               data-collapse-toggle="navbar-cta"
               type="button"
@@ -75,7 +76,7 @@ function Navbar() {
                   to="/home"
                   className={
                     active_st.value === "home"
-                      ? "block py-2 pl-3 pr-4 text-blue-700 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                      ? "block py-2 pl-3 pr-4 text-blue-700  rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                       : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   }
                   aria-current={active_st.value === "home" ? "page" : ""}
@@ -87,10 +88,10 @@ function Navbar() {
               <li>
                 <button onClick={()=>handleClick("about")}>
                 <Link
-                  to="/home"
+                  to="/about-us"
                   className={
                     active_st.value === "about"
-                      ? "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                      ? "block py-2 pl-3 pr-4 text-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                       : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   }
                   aria-current={active_st.value === "about" ? "page" : ""}
@@ -105,7 +106,7 @@ function Navbar() {
                   to="/home"
                   className={
                     active_st.value === "account"
-                      ? "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                      ? "block py-2 pl-3 pr-4 text-blue-700  rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                       : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   }
                   aria-current={active_st.value === "account" ? "page" : ""}
@@ -117,10 +118,10 @@ function Navbar() {
               <li>
                 <button onClick={()=>handleClick("contact")}>
                 <Link
-                  to="/home"
+                  to="/contact-us"
                   className={
                     active_st.value === "contact"
-                      ? "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                      ? "block py-2 pl-3 pr-4 text-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                       : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   }
                   aria-current={active_st.value === "contact" ? "page" : ""}
@@ -134,7 +135,6 @@ function Navbar() {
         </div>
       </nav>
 
-      <div>{active_st.value}</div>
     </>
   );
 }

@@ -6,7 +6,9 @@ import SignupPage from "./Components/LoginSignup/SignupPage"
 import Home from "./Components/Home/Home"
 import ProductDetails from "./Components/ProductDetailedView/ProductDetails";
 import {Provider} from "react-redux";
-import store from "./store/store"
+import store from "./store/store";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import AboutUs from "./Components/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/settings" element={<PersonalDetails />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/about-us" element={<AboutUs />} />
+
         </Routes></BrowserRouter></Provider>  
     </div>
   );

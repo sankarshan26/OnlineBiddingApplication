@@ -3,11 +3,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import Timer from "./Timer";
-
-// import required modules
+import { useDispatch} from "react-redux"; // for putting something or changing some value in the store we use useDispatch
+// for getting some value from the store we use useSelector
 import { Pagination } from "swiper/modules";
+import { changeDetailedView } from "../../store/ProductDetailedViewSlice";
 
 export default function TopDeals({heading, data}) {
+  const dispatch = useDispatch() ;
+ 
   return (
     <div className="flex flex-col justify-center items-center my-20">
       <div
@@ -25,8 +28,8 @@ export default function TopDeals({heading, data}) {
           grabCursor={true}
           breakpoints={{
             500: { slidesPerView: 2 },
-            640: { slidesPerView: 3 },
-            1028: { slidesPerView: 4 },
+            922: { slidesPerView: 3 },
+            1320: { slidesPerView: 4 },
           }}
           loop={true}
           modules={[Pagination]}
@@ -34,7 +37,22 @@ export default function TopDeals({heading, data}) {
         >
           {data.map((item) => {
             return(<SwiperSlide>
-              <div className="min-w-[250px]">
+              <div className="min-w-[250px]" onClick={()=>{
+                dispatch(
+                  changeDetailedView({
+                    id: item.id,
+                    name:item.name,
+                    rating: item.rating,
+                    endDate: item.endDate,
+                    basePrice: item.basePrice,
+                    currPrice: item.currPrice,
+                    Topbidder : item.Topbidder,
+                    image:
+                      item.image, 
+                    images: item.images,
+                  })
+                );
+              }}>
                 <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
                   <Link to="/" className="flex justify-center">
                     <img
@@ -66,12 +84,17 @@ export default function TopDeals({heading, data}) {
                     <div><Timer endDate={new Date(`${item.endDate}`)} /></div>
 
                     <div className="flex items-center gap-1">
-                      <span className="">Base Price</span> <sapn>:</sapn>
+                      <span className="">Base Price</span> <span>:</span>
                       <span className="text-xl font-semibold text-gray-400 " style={{textDecoration: 'line-through'}}>${item.basePrice}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <span className="">Current Bid</span> <sapn>:</sapn>
+                      <span className="">Current Bid</span> <span>:</span>
                       <span className="text-2xl font-bold text-gray-900 ">${item.currPrice}</span>
+                    </div>
+
+                    <div className="flex items-center gap-1">
+                      <span className="">Top Bidder</span> <span>:</span>
+                      <span className=" text-gray-900 ">{item.Topbidder}</span>
                     </div>
 
                     <div className="flex items-center justify-center mt-2">

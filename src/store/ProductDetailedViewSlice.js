@@ -5,9 +5,10 @@ const ProductDetailedViewSlice = createSlice({
         id:101,
         name:"Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
         rating:5.0,
-        endDate : '2023-11-10T23:59:59Z',
+        endDate : '2023-11-17T23:59:59Z',
         basePrice: 350,
         currPrice: 400,
+        Topbidder : "@tels",
         image:"https://img.freepik.com/free-photo/close-up-hand-holding-smartphone_23-2149148857.jpg",
         images: [
             "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/2/z/4/-original-imagqxx2haehpjnf.jpeg?q=70",
@@ -18,6 +19,7 @@ const ProductDetailedViewSlice = createSlice({
     },
     reducers:{
         changeDetailedView(state,action){
+            console.log(state)
             state.id= action.payload.id
             state.name=action.payload.name
             state.rating =action.payload.rating
@@ -26,6 +28,7 @@ const ProductDetailedViewSlice = createSlice({
             state.currPrice =action.payload.currPrice
             state.image =action.payload.image
             state.images = [...action.payload.images]
+            state.Topbidder = action.payload.Topbidder
 
         },
     }
