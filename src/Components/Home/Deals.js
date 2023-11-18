@@ -54,7 +54,7 @@ export default function TopDeals({heading, data}) {
                 );
               }}>
                 <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
-                  <Link to="/" className="flex justify-center">
+                  <Link to="/productdetails" className="flex justify-center">
                     <img
                       className="p-3 rounded-t-lg h-[200px] overflow-hidden"
                       src={item.image}
@@ -62,7 +62,7 @@ export default function TopDeals({heading, data}) {
                     />
                   </Link>
                   <div className="px-5 pb-5">
-                    <Link to="/">
+                    <Link to="/productdetails">
                       <h5 className="text-xl font-semibold tracking-tight text-gray-900 text-center">
                         {item.name}
                       </h5>

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../NavigationBar/Navbar";
-
+import Footer from "../Footer/Footer"
 function ContactUs() {
   return (
     <>
@@ -13,22 +13,6 @@ function ContactUs() {
               <div class="flex flex-wrap items-center">
                 <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
                   <div class="h-[500px] w-full">
-                    {/* <iframe
-                      src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                      class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-                      frameborder="0"
-                      allowfullscreen
-                      title="map"
-                    ></iframe> */}
-                    {/* <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.668013987744!2d83.03709759492443!3d24.21840409165175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398eda56173a4ebd%3A0xc5b9bd6bcf178f68!2sState%20Bank%20of%20India%20RENUKOOT!5e0!3m2!1sen!2sin!4v1700115717554!5m2!1sen!2sin"
-                      frameborder="0"
-                      allowfullscreen
-                      class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-                      loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
-                      title="location"
-                    ></iframe> */}
 
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.04078593244!2d80.15085337499048!3d12.840640987462784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259af8e491f67%3A0x944b42131b757d2d!2sVellore%20Institute%20of%20Technology%20Chennai%20Campus%20(VIT%20Chennai)!5e0!3m2!1sen!2sin!4v1700116413912!5m2!1sen!2sin"
@@ -169,6 +153,8 @@ function ContactUs() {
           {/* <!-- Section: Design Block --> */}
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

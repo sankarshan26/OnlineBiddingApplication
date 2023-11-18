@@ -1,13 +1,11 @@
 import React from "react";
 import Navbar from "../NavigationBar/Navbar";
-import Sticky from 'react-stickynode';
-
+import GooglePay from "./GooglePayButton";
+import Footer from "../Footer/Footer"
 function PersonalDetails() {
   return (
     <>
-      <Sticky>
-        <Navbar />
-      </Sticky>
+      <Navbar />
       <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
         <div className="container max-w-screen-lg mx-auto">
           <div>
@@ -72,15 +70,7 @@ function PersonalDetails() {
                           placeholder="Country"
                           className="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent"
                         />
-                        {/* <button tabindex="-1" className="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-                    <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                  </button>
-                  <button tabindex="-1" for="show_more" className="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-                    <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                  </button> */}
+                        
                       </div>
                     </div>
 
@@ -93,15 +83,7 @@ function PersonalDetails() {
                           placeholder="State"
                           className="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent"
                         />
-                        {/* <button tabindex="-1" className="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-                    <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                  </button> */}
-                        {/* <button tabindex="-1" for="show_more" className="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-                    <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                  </button> */}
+                        
                       </div>
                     </div>
 
@@ -127,9 +109,47 @@ function PersonalDetails() {
                 </div>
               </div>
             </div>
-          </div>
+          </div><div>
+          <div className="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+              <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+                <div className="text-gray-600">
+                  <p className="font-medium text-lg">Wallet Details</p>
+                </div>
+
+                <div className="lg:col-span-2">
+                  <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                    <div className="md:col-span-5">
+                      <span>Current Wallet Amount : </span>
+                      <span className="font-medium text-lg">100$</span>
+                    </div>
+                    <div className="md:col-span-5">
+                      <label for="amount_added">Amount to be added in the wallet</label>
+                      <input
+                        type="text"
+                        name="amount_added"
+                        id="amount_added"
+                        className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                        placeholder="10$"
+                      />
+                    </div>
+
+
+                    <div className="md:col-span-5 text-center pt-2">
+                      <div className="inline-flex items-end justify-center">
+                        {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                          Submit
+                        </button> */}
+                        <GooglePay />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

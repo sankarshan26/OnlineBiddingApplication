@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { changeDetailedView } from "../../store/ProductDetailedViewSlice";
 import Timer from "../Home/Timer";
+import Footer from "../Footer/Footer"
 
 function ProductDetails() {
   const [active_pic, setActive_pic] = useState(
@@ -180,6 +181,7 @@ function ProductDetails() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
